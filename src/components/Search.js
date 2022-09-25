@@ -1,12 +1,12 @@
 import React from "react";
 
-function Search() {
+function Search({ input }) {
   return (
     <div className="ui large fluid icon input">
       <input
         type="text"
         placeholder="Search your Recent Transactions"
-        onChange={() => console.log("Searching...")}
+        onChange={(event) => input(event.target.value.toLocaleUpperCase())}
       />
       <i className="circular search link icon"></i>
     </div>
