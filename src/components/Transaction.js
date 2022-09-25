@@ -1,13 +1,17 @@
 import React from "react";
 
-function Transaction() {
+function Transaction({ item }) {
   return (
-    <tr>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
-      <td>{"your code here..."}</td>
-    </tr>
+    <>
+      {item.map((data) => (
+        <tr key={data.id}>
+          <td>{"your code here..."}</td>
+          <td>{"your code here..."}</td>
+          <td>{"your code here..."}</td>
+          <td>{"your code here..."}</td>
+        </tr>
+      ))}
+    </>
   );
 }
 

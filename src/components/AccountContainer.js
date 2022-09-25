@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
-import Data from "../db.json";
 
 function AccountContainer() {
-  let data = Data.transactions;
-  console.log(data)
+  const [query, setQuery] = useState("");
+
+  const [transaction, setTransaction] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8001/transactions")
+      .then((r) => r.json())
+      .then((data) => setTransaction(data));
+  });
+
+  const keys = ["description", "category"];
+
+  const search = (data) => {
+    return data.filter((item) =>
+      keys.some((key) => item[key].toUpperCase().includes(query))
+    );
+  };
   return (
     <div>
-      <Search />
+      <Search input={setQuery} />
       <AddTransactionForm />
-      <TransactionsList />
+      <TransactionsList data={search(transaction)} />
     </div>
   );
 }
