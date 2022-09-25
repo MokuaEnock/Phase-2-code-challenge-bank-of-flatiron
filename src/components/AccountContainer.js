@@ -9,7 +9,8 @@ function AccountContainer() {
   const [transaction, setTransaction] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8001/transactions")
+    let url = "http://localhost:3000/transactions"
+    fetch(url)
       .then((r) => r.json())
       .then((data) => setTransaction(data));
   });
