@@ -86,42 +86,11 @@
     },
     {
       "data": "",
-      "description": "jhhh",
-      "category": "food",
-      "amount": "20",
-      "date": "2022-09-22",
-      "id": 13
-    },
-    {
-      "data": "",
-      "description": "chips",
-      "category": "food",
-      "amount": "200",
-      "id": 14
-    },
-    {
-      "data": "",
-      "description": "chips",
-      "category": "food",
-      "amount": "200",
-      "date": "2022-09-23",
-      "id": 15
-    },
-    {
-      "data": "",
-      "description": "chips",
-      "category": "food",
-      "amount": "89",
-      "date": "2022-09-24",
-      "id": 16
-    },
-    {
-      "data": "",
-      "description": "chips",
-      "category": "true",
-      "amount": "23",
-      "date": "2022-09-10",
-      "id": 17
+      "description": "fare",
+      "category": "transport",
+      "amount": "10000",
+      "date": "2022-10-01",
+      "id": 18
     }
   ]
 }
